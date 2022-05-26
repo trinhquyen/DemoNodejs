@@ -1,0 +1,13 @@
+const mongoose = require('mongoose');
+const { number } = require('sharp/lib/is');
+
+const Schema = mongoose.Schema;
+const employee = new Schema({
+  fullName: {type: String},
+  age: {type: number},
+  email: {type: String},
+  createAt: {type: Date, default: Date.now},
+  UpdateAt: {type: Date, default: Date.now},
+});
+
+module.exports = mongoose.model('employee', employee)

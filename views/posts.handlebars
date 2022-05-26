@@ -1,0 +1,13 @@
+<div>
+    {{#each databases}}
+    <ul>
+        <li>
+            <img src="{{this.image}}" alt="">
+            <h2>{{this.title}}</h2>
+            <p>{{this.description}}</p>
+            <a href="/posts/delete/{{this.id}}">Delete</a>
+            <a href="/posts/{{this.id}}/edit">Update</a>
+        </li>
+    </ul>
+    {{/each}}
+</div>

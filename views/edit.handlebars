@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+</head>
+<body>
+  <h1>Edit post</h1>
+  <form action="/posts/{{post.id}}/edit" enctype="multipart/form-data" method="PUT">
+    <label for="title">Title:</label><br>
+    <input type="text" value="{{post.title}}" id="title" name="title"><br>
+    <label for="description">Description:</label><br>
+    <input type="text" value="{{post.description}}" id="description" name="description"><br><br>
+    <label for="">Image:</label>{{post.image}}<br>
+    <img src="/{{post.image}}" alt=""><br>
+    <label for="image">Change image:</label><br>
+    <input type="file" id="image" name="image" /><br><br>
+    <input type="submit" value="Save"/>
+  </form>
+</body>
+</html>
